@@ -1,7 +1,7 @@
 # coding=utf-8
 
 from selenium import webdriver
-import unittest
+import unittest,time
 
 class NewVisitorTest(unittest.TestCase):
     def setUp(self):
@@ -15,7 +15,8 @@ class NewVisitorTest(unittest.TestCase):
         self.browser.get('http://localhost:8000')
 
         self.assertIn('To-Do', self.browser.title)
-        self.fail('Finish the test!')
+        time.sleep(2)
+        #self.fail('Finish the test!')
 
 if __name__ == '__main__':
     unittest.main()
