@@ -7,7 +7,6 @@ import unittest,time
 class NewVisitorTest(unittest.TestCase):
     def setUp(self):
         self.browser = webdriver.Firefox()
-        time.sleep(2)
 
     def tearDown(self):
         self.browser.quit()
